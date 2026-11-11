@@ -2,24 +2,17 @@
 
 Application indépendante d’analyse éducative du marché des changes, écrite pour ce portfolio avec une identité visuelle propre. Elle récupère des cours indicatifs depuis Yahoo Finance, calcule des indicateurs explicites sur des bougies OHLC, fait coopérer un analyste technique déterministe, un contrôleur de risque déterministe et un superviseur Groq, puis propose un backtest chronologique hors échantillon d’une stratégie SMA. Elle n’exécute aucun ordre.
 
-## Lancer en local
+## Démarrage rapide depuis GitHub
 
-Python 3.11 ou supérieur est nécessaire.
+Tu peux récupérer et lancer ce projet sur un autre ordinateur. Il faut une connexion Internet et Python 3.11 ou supérieur.
 
-```powershell
-py -3.13 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env
-```
+1. Sur GitHub, ouvre le dépôt et choisis **Code → Download ZIP**, puis décompresse le dossier. Tu peux aussi le cloner : `git clone https://github.com/wolfamoun/trading-agent-.git`.
+2. Sur Windows, double-clique `start_windows.bat`. Sur macOS ou Linux, ouvre un terminal dans le dossier et lance `bash start_mac_linux.sh`.
+3. Le premier démarrage crée un environnement Python, installe les dépendances et ouvre l’application dans le navigateur à <http://127.0.0.1:8000>. Garde la fenêtre du serveur ouverte pendant l’utilisation; ferme-la pour arrêter l’application.
 
-Ouvre `.env`, ajoute **une clé Groq nouvellement créée**, puis démarre le serveur.
+Le tableau de bord et les données de marché peuvent être consultés sans clé IA. Pour utiliser le chatbot, ouvre le fichier `.env` créé au premier démarrage, remplace `replace_with_a_new_key` par une nouvelle clé Groq, puis redémarre l’application. Ne publie jamais `.env` sur GitHub. Le fichier est ignoré par Git.
 
-```powershell
-uvicorn main:app --reload
-```
-
-Visite <http://127.0.0.1:8000>. La liste inclut 14 paires majeures et crosses G10. Choisis D1, H4, H1 ou M15. Le bureau calcule SMA/EMA, RSI, MACD, bandes de Bollinger, ATR, ADX/+DI/-DI, stochastique, CCI, Williams %R, OBV, Ichimoku, pivots et retracements de Fibonacci. Les calculs utilisent l’historique de prix OHLC reçu.
+La liste inclut 14 paires majeures et crosses G10. Choisis D1, H4, H1 ou M15. Le bureau calcule SMA/EMA, RSI, MACD, bandes de Bollinger, ATR, ADX/+DI/-DI, stochastique, CCI, Williams %R, OBV, Ichimoku, pivots et retracements de Fibonacci. Les calculs utilisent l’historique de prix OHLC reçu.
 
 Le chat garde jusqu’à 40 messages dans `sessionStorage` pour l’onglet courant; l’API ne reçoit que les 12 derniers messages. Le bouton ↺ ouvre une nouvelle conversation. Le bouton de thème change toute l’interface entre clair et sombre. Entrée envoie le message; Maj+Entrée ajoute une nouvelle ligne.
 
@@ -59,7 +52,7 @@ Les cartes de cours, les 37 indicateurs calculés par Fieldnote et le contexte e
 
 ## Publier gratuitement sur Render
 
-1. Crée un dépôt GitHub public pour ce nouveau projet et pousse les fichiers de ce dossier.
+1. Ouvre le dépôt [Fieldnote FX sur GitHub](https://github.com/wolfamoun/trading-agent-).
 2. Dans Render, crée un Blueprint à partir de ce dépôt. Le fichier `render.yaml` décrit le service.
 3. Dans la configuration du service, ajoute `GROQ_API_KEY` comme variable secrète. Ajoute une clé fraîche dans Render, jamais dans GitHub.
 4. Render construira le site et affichera une adresse `onrender.com`.
