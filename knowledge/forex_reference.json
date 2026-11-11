@@ -1,0 +1,30 @@
+[
+  {
+    "id": "pip-basics",
+    "title": "Pips et précision des cotations",
+    "content": "Une pip est habituellement la quatrième décimale d’une paire de devises. Pour une paire dont la devise de cotation est le yen japonais, elle correspond habituellement à la deuxième décimale. Certains courtiers affichent une décimale supplémentaire appelée pipette. La valeur monétaire d’une pip dépend aussi de la taille de position et de la devise du compte.",
+    "source_title": "OANDA · Glossaire forex",
+    "source_url": "https://help.oanda.com/uk/en/faqs/glossary.htm"
+  },
+  {
+    "id": "adx-strength",
+    "title": "ADX et force de tendance",
+    "content": "L’ADX est un indicateur de force de tendance et ne donne pas, seul, le sens haussier ou baissier. Les lignes directionnelles +DI et -DI servent à examiner le sens. Les seuils tels que 20 ou 25 sont des conventions d’analyse, pas une garantie ni une règle universelle.",
+    "source_title": "Fidelity · Guide des indicateurs techniques",
+    "source_url": "https://www.fidelity.com/bin-public/060_www_fidelity_com/documents/learning-center/Transcript_Tech%20analysis.pdf"
+  },
+  {
+    "id": "fx-otc-structure",
+    "title": "Marché FX de gré à gré",
+    "content": "Le marché spot FX et la plupart des dérivés FX se négocient de gré à gré, par l’intermédiaire de banques, courtiers et plateformes multiples. L’activité est fragmentée entre plusieurs lieux. Les volumes d’un fournisseur unique ne représentent donc pas un volume centralisé et exhaustif du marché spot mondial.",
+    "source_title": "BIS · Enquête triennale FX 2025",
+    "source_url": "https://www.bis.org/publications/qr-202512/fx-trade-execution-landscape-through-prism-2025-bis-triennial-survey"
+  },
+  {
+    "id": "retail-fx-risk",
+    "title": "Risque du forex de détail OTC",
+    "content": "Le forex OTC de détail comporte des risques de contrepartie, de levier et de pertes. Avant toute décision, il faut vérifier l’enregistrement du courtier, les coûts, les modalités de retrait et les risques de marge. Une simulation historique ne garantit aucun résultat futur.",
+    "source_title": "CFTC · Avertissement sur le forex OTC",
+    "source_url": "https://www.cftc.gov/PressRoom/PressReleases/8566-22"
+  }
+]
